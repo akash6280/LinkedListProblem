@@ -30,7 +30,7 @@ public class LinkedList<T> {
 	public void printMyNodes() {
 		Node<T>tempNode = head;
 		while(tempNode!=null) {
-			System.out.print(tempNode.getData());
+			System.out.print(tempNode.getData()+" ");
 			tempNode=tempNode.getNext();
 		}
 	}
@@ -40,6 +40,9 @@ public class LinkedList<T> {
 		beforeNode.setNext(newNode);
 		newNode.setNext(tempNode);
 		
-		
+	}
+	
+	public void popFirst() {
+		head = head.getNext();
 	}
 }
