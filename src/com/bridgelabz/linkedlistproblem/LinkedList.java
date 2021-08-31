@@ -34,4 +34,12 @@ public class LinkedList<T> {
 			tempNode=tempNode.getNext();
 		}
 	}
+	public void insertNodeBetween(Node<T> beforeNode,Node<T> newNode)
+	{
+		Node<T>tempNode=beforeNode.getNext();
+		beforeNode.setNext(newNode);
+		newNode.setNext(tempNode);
+		
+		
+	}
 }
