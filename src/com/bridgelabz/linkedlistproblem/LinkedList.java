@@ -18,5 +18,20 @@ public class LinkedList<T> {
 			head=newNode;
 		}
 	}
-
+	public void append(Node<T> newNode) {
+		if(tail==null)
+			this.tail=newNode;
+		if(head==null)
+			this.head=newNode;
+		else
+			tail.setNext(newNode);
+			tail=newNode;
+	}
+	public void printMyNodes() {
+		Node<T>tempNode = head;
+		while(tempNode!=null) {
+			System.out.print(tempNode.getData());
+			tempNode=tempNode.getNext();
+		}
+	}
 }
