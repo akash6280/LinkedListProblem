@@ -18,6 +18,7 @@ public class LinkedList<T> {
 			head=newNode;
 		}
 	}
+	
 	public void append(Node<T> newNode) {
 		if(tail==null)
 			this.tail=newNode;
@@ -27,6 +28,7 @@ public class LinkedList<T> {
 			tail.setNext(newNode);
 			tail=newNode;
 	}
+	
 	public void printMyNodes() {
 		Node<T>tempNode = head;
 		while(tempNode!=null) {
@@ -34,6 +36,7 @@ public class LinkedList<T> {
 			tempNode=tempNode.getNext();
 		}
 	}
+	
 	public void insertNodeBetween(Node<T> beforeNode,Node<T> newNode)
 	{
 		Node<T>tempNode=beforeNode.getNext();
@@ -54,5 +57,18 @@ public class LinkedList<T> {
 		}
 		tail = temp;
 		tail.setNext(null);
+	}
+	
+	public void find(T key) {
+		Node<T> currentNode = head;
+		while (currentNode != null) {
+			if (currentNode.getData()==key) {
+				System.out.println("key found ");
+				break;
+			}
+			currentNode = currentNode.getNext();
+		}
+		if(currentNode==null)
+			System.out.println("key not found");
 	}
 }
