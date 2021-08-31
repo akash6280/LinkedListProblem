@@ -9,7 +9,7 @@ public class LinkedListMain {
 		myLinkedList.append(firstNode);
 		myLinkedList.append(secondNode);
 		myLinkedList.append(thirdNode);
-		myLinkedList.popLast();
+		myLinkedList.find(30);
 		myLinkedList.printMyNodes();
 		
 	}
