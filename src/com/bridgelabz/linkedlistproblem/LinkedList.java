@@ -45,4 +45,14 @@ public class LinkedList<T> {
 	public void popFirst() {
 		head = head.getNext();
 	}
+	
+	public void popLast() {
+		Node<T> tempNode=head;
+		Node<T> temp = head;
+		while (temp.getNext() != tail) {
+			temp = temp.getNext();
+		}
+		tail = temp;
+		tail.setNext(null);
+	}
 }
