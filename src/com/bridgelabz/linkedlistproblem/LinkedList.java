@@ -59,16 +59,14 @@ public class LinkedList<T> {
 		tail.setNext(null);
 	}
 	
-	public void find(T key) {
+	public int find(T key) {
 		Node<T> currentNode = head;
 		while (currentNode != null) {
 			if (currentNode.getData()==key) {
-				System.out.println("key found ");
-				break;
+				return 1;
 			}
 			currentNode = currentNode.getNext();
 		}
-		if(currentNode==null)
-			System.out.println("key not found");
+		return 0;
 	}
 }
