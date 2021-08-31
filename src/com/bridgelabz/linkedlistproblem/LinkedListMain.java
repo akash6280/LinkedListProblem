@@ -9,7 +9,11 @@ public class LinkedListMain {
 		myLinkedList.append(firstNode);
 		myLinkedList.append(secondNode);
 		myLinkedList.append(thirdNode);
-		myLinkedList.find(30);
+		
+		int found=myLinkedList.find(30);
+		if(found==1)
+			myLinkedList.insertNodeBetween(secondNode,new Node(40));
+		
 		myLinkedList.printMyNodes();
 		
 	}
